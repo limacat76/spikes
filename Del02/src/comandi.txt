@@ -1,0 +1,5 @@
+g++ -fPIC -shared shared.cpp -o libshared.so
+nm -gC libshared.so
+g++ -L. -lshared -o main main.cpp
+g++ -L. -o main main.cpp -lshared
+LD_LIBRARY_PATH=. ./main
