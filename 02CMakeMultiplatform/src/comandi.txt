@@ -3,3 +3,7 @@ nm -gC libshared.so
 g++ -L. -lshared -o main main.cpp
 g++ -L. -o main main.cpp -lshared
 LD_LIBRARY_PATH=. ./main
+
+##
+# sudo apt-get update
+# sudo apt install ninja-build
